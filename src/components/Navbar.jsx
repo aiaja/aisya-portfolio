@@ -4,10 +4,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 function Navbar() {
-  const [theme, setTheme] = useState(() =>
-    typeof window !== "undefined"
-      ? localStorage.getItem("theme") || "light"
-      : "light"
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light"
   );
 
   useEffect(() => {
